@@ -8,7 +8,7 @@ serial_number = "30AC2A3";
 
 master_clock_rate = 60e6;
 interpolation_factor = 4;
-tx_gain = 60;
+tx_gain = 70;
 
 % LoRa Signal
 bandwidth = 250e3;
@@ -19,8 +19,6 @@ df = 0;
 
 file = get_shared_data_file();
 signal_transmitting_center_frequency = file.Data(1);
-
-disp(signal_transmitting_center_frequency);
 
 tx = comm.SDRuTransmitter(...
     Platform = platform, ...
